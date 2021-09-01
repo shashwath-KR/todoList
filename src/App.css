@@ -1,0 +1,99 @@
+
+.container {
+    width: 35vw;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    font-size: 11px;
+    position: relative;
+    top: 80px;
+    padding-top: 2px;
+    padding-bottom: 25px;
+}
+
+
+@media screen and (min-width: 320px) {
+  .container {
+    width: 40vw;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    font-size: 21px;
+    position: relative;
+    top: 80px;
+    padding-top: 2px;
+    padding-bottom: 25px;
+  }
+}
+
+input {
+  width: 15vw;
+  height: 20px;
+  font-size: 18px;
+  border: none;
+  background-color: rgb(238, 225, 238);
+  padding-left: 15px;
+}
+
+@media screen and (min-Width: 992px) {
+  input {
+    width: 30vw;
+    height: 28px;
+    font-size: 21px;
+    border: none;
+    background-color: rgb(238, 225, 238);
+    padding-left: 15px;
+  }
+}
+
+button {
+  background-color: teal;
+  font-size: 12px;
+  padding: 3px 7px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(120, 120, 233);
+  color: white;
+  transition: 1s;
+}
+
+@media  screen and (min-width: 992px) {
+  button {
+    background-color: teal;
+    font-size: 18px;
+    padding: 5px 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: rgb(120, 120, 233);
+    color: white;
+    transition: 1s;
+  }
+}
+
+.btn {
+ position: relative;
+ top: 10px;
+ font-size: 18px;
+ color: brown;
+cursor: pointer;
+background-color: rgb(241, 236, 212);
+}
+
+.main{
+  display: flex;
+  justify-content: space-around;
+}
+
+.del {
+  font-size: 14px;
+  background-color: rgb(167, 11, 11);
+  height: 40px;
+  position: relative;
+  top: 20px;
+}
