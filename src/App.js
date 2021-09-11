@@ -42,7 +42,7 @@ const App = () => {
              <div style= {{textAlign: 'left', marginTop: '20px', marginLeft: '25px', width: '35vw'
            , backgroundColor: 'ghostwhite', border: '1px solid black', borderRadius: '2px', 
            padding: '5px 0px 5px 25px'}} >{text}</div>
-           <button  onClick= {() => filterIt(id)} className= 'del'>Delete</button> 
+           <button  onClick= {() => filterIt(text.id)} className= 'del'>Delete</button> 
            </div>
           )})
       }</div>
