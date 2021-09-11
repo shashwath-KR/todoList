@@ -1,10 +1,10 @@
 
 .container {
-    width: 35vw;
+    width: 70vw;
     margin: auto;
     text-align: center;
     background-color: white;
-    font-size: 11px;
+    font-size: 17px;
     position: relative;
     top: 80px;
     padding-top: 2px;
@@ -12,7 +12,7 @@
 }
 
 
-@media screen and (min-width: 320px) {
+@media screen and (min-width: 500px) {
   .container {
     width: 40vw;
     margin: auto;
@@ -27,15 +27,15 @@
 }
 
 input {
-  width: 15vw;
-  height: 20px;
-  font-size: 18px;
+  width: 45vw;
+  height: 25px;
+  font-size: 20px;
   border: none;
   background-color: rgb(238, 225, 238);
   padding-left: 15px;
 }
 
-@media screen and (min-Width: 992px) {
+@media screen and (min-Width: 442px) {
   input {
     width: 30vw;
     height: 28px;
@@ -48,8 +48,8 @@ input {
 
 button {
   background-color: teal;
-  font-size: 12px;
-  padding: 3px 7px;
+  font-size: 15px;
+  padding: 6px 9px;
   border: none;
   cursor: pointer;
 }
