@@ -26,6 +26,14 @@
   }
 }
 
+h4 {
+  width: 30vw;
+  height: 30px;
+  background-color: rgb(240, 221, 195);
+  text-align: left;
+  padding: 6px 10px;
+}
+
 input {
   width: 45vw;
   height: 25px;
@@ -95,5 +103,5 @@ background-color: rgb(241, 236, 212);
   background-color: rgb(167, 11, 11);
   height: 40px;
   position: relative;
-  top: 20px;
+  top: 30px;
 }

@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
 
-const Form = ({onSubmit}) => {
-  const useInput = initialValue => {
-  const [value, setValue] = useState(initialValue); 
-    return  { 
-    value,
-    onChange: e => setValue(e.target.value),
-    resetValue: () => setValue('')
+const Form = ({todo, setTodo}) => {
+  const[input, setInput] = useState('');
+  const useInput = (e) => {
+    e.preventDefault();
+    const user = {
+      id: new Date().getTime(),
+      text: input,
+      completed: false
+    }
+      setTodo([...todo].concat(user))
+      setInput('');
   }
-}
 
-const { resetValue, ...text } = useInput(''); 
+  /*text => {if(text)  {
+    setAlert('items added')
+    setList('Clear List')
+    setTimeout(() => {
+    setAlert('')
+   }, 2000)} else{ text = false }
+   }} */
 
     return (
-        <form onSubmit= {
-          e => {
-            e.preventDefault();
-            onSubmit(text.value);
-            resetValue();
-          }
-        }>
-       <input type= 'text' placeholder= 'e.g toys' {...text} required />
+        <form onSubmit= {useInput}>
+       <input type= 'text' value= {input} onChange= {(e) => setInput(e.target.value)} placeholder= 'e.g toys' required />
         <button type= 'submit'>Submit</button> 
         </form>
       )

@@ -4,49 +4,29 @@ import Form from './form';
 
 const App = () => {
  const[todo, setTodo] = useState([])
- const[alert, setAlert] = useState('');
- const[list, setList] = useState('');
- //const[note, setNote] = useState('');
 
-
-
- const Remove = () => {
-   setTodo([])
-   setList('')
-   setAlert('empty list..')
-     setTimeout(() => {
-      setAlert('')
-     }, 2000)
-   }
-
-   const filterIt = (id) => {
-      setTodo(todo.filter((text) => text.id !== id));
+ const filterIt = (id) => {
+      setTodo(todo.filter((input) => input.id !== id))
      }
 
   return (
     <section className= 'container'>
-    <h4 style= {{width: '30vw', backgroundColor: 'chocolate', margin: 'auto', 
-    fontSize: '15px', fontWeight: '300'}} >{alert}</h4>
       <h1>Grocery Bud</h1>
-      <Form onSubmit = {text => {if(text) {setTodo([{text, complete:false}, ...todo]) 
-      setAlert('items added')
-      setList('Clear List')
-      setTimeout(() => {
-      setAlert('')
-     }, 2000)} else{ text = false }
-     }} />
-      <div>{
-          todo.map(({text}, id) => {     
+      <Form todo= {todo} setTodo= {setTodo} />
+      <div>
+         {
+          todo.map((input, index) => {     
           return ( 
-              <div className= 'main' key= {text}>
-             <div style= {{textAlign: 'left', marginTop: '20px', marginLeft: '25px', width: '35vw'
-           , backgroundColor: 'ghostwhite', border: '1px solid black', borderRadius: '2px', 
-           padding: '5px 0px 5px 25px'}} >{text}</div>
-           <button  onClick= {() => filterIt(text.id)} className= 'del'>Delete</button> 
+              <div className= 'main' key= {index} >
+             <h4>{input.text}</h4>
+           <div>
+           <button onClick= {() => filterIt(input.id)} className= 'del'>Delete</button> 
+           </div>
            </div>
           )})
-      }</div>
-      <span onClick= {Remove} className= 'btn' >{list}</span>   
+      }
+      </div>
+      <button onClick= {() => setTodo([])} style= {{backgroundColor: 'ButtonShadow'}} type= 'reset'>Clear</button>
     </section>
   )
 }
